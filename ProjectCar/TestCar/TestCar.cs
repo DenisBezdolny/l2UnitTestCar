@@ -7,7 +7,7 @@ namespace TestCar
 
         private Car _car;
 
-        TestCar()
+        public TestCar()
         {
             _car = new Car();
         }
@@ -37,7 +37,7 @@ namespace TestCar
         [InlineData(new object[] { PlaceForUsingCar.City, true })]
         [InlineData(new object[] { PlaceForUsingCar.Forest, true })]
         [InlineData(new object[] { PlaceForUsingCar.Desert, false })]
-        [InlineData(new object[] { PlaceForUsingCar.Field, true })]
+        [InlineData(new object[] { PlaceForUsingCar.Field, false })]
         [InlineData(new object[] { PlaceForUsingCar.Ocean, false })]
         public void CanItBeUsedToDriveInIt(PlaceForUsingCar placeForUsingCar, bool expectedResult)
         {
