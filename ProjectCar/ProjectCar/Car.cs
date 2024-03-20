@@ -16,6 +16,24 @@ namespace ProjectCar
             return (speed);
         }
 
+        public bool CanItBeUsedInThePlace(PlaceForUsingCar placeForUsingCar)
+        {
+            switch (placeForUsingCar)
+            {
+                case PlaceForUsingCar.City:
+                case PlaceForUsingCar.Field:
+                case PlaceForUsingCar.Forest:
+                    return true;
+                case PlaceForUsingCar.Desert:
+                case PlaceForUsingCar.Ocean:    
+                    return false;
+
+                default: return false;
+                    
+            }
+
+        }
+
 
     }
 }
